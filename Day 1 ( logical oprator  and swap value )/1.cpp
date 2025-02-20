@@ -22,5 +22,5 @@ int main()
     cout << a % b << endl;
 
     cout << "----------------------" << endl;
-    return 0;
+    
 }

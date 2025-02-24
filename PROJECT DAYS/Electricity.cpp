@@ -1,14 +1,3 @@
-
-<<<<<<< HEAD
-=======
-// • For next 100 units Rs. 0.75/unit
-
-// • For next 150 units Rs. 1.20/unit
-
-// . For unit above 250 Rs. 1.50/unit
-
-// • An additional surcharge of 20% is added to the bill
-
 #include <iostream>
 using namespace std;
 int main(){
@@ -49,4 +38,3 @@ int main(){
     cout << "total : " << total << endl ;
    
 } 
->>>>>>> 8d49d60 (Updated DSA code)

@@ -10,7 +10,7 @@ private:
     string model;
 
 public:
-    void Showroom(string name, string color, string price, string model)
+    void Showroom(string name, string color, string price, string model) // set
     {
         this->name = name;
         this->color = color;
@@ -18,7 +18,7 @@ public:
         this->model = model;
     }
 
-    void Top_Cars()
+    void Top_Cars() // get
     {
         cout << "+---------------------------------+" << endl;
         cout << "| Name    : " << name << endl;

@@ -40,4 +40,3 @@ public:
 
 int Car::count = 0;
 
-int main()

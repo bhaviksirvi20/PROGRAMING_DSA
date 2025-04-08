@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "PROJECT DAYS"
+		},
+		{
+			"path": "projects o_o"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.embeddedhtml": "html",
+			"iostream": "cpp",
+			"ostream": "cpp"
+		}
+	}
+}

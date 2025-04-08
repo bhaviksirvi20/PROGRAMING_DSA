@@ -33,7 +33,7 @@ public:
         double depo;
         cout << "| Adds funds to the account : ";
         cin >> depo;
-        depo = balance + depo;
+        depo += balance + depo;
         cout << "| add deposite currant balance : $ " << depo << endl;
         cout << "----------------------------------------------" << endl
              << endl;
@@ -96,8 +96,15 @@ class CheckingAccount : public Bankaccount
         double withd;
         double user;
         cout << "---------------Over Draft Limit---------------" << endl;
+        double overlimit = 40000;
+                
+        
+        double total = withd + user;
+        cin >> total;
+        
         cout << "Enter your amount : ";
         cin >> user;
+
         if (withd <= user)
         {
             cout << "you can avail overdraft : " << user << endl;
@@ -127,3 +134,46 @@ int main()
     banks.OverDraftLimit();
     
 }
+
+
+
+
+
+// class Fixed DepositAccount : public Bankaccount
+// {
+//     public:
+    
+//  void term()
+//     {
+//         double withd;
+//         double user;
+//         cout << "---------------Over Draft Limit---------------" << endl;
+//         cout << "Enter your amount : ";
+//         cin >> user;
+//         if (withd <= user)
+//         {
+//             cout << "you can avail overdraft : " << user << endl;
+//         }
+//         else
+//         {
+//             cout << "If you already have the money you need in your account, you don't need to take an overdraft from the bank" << endl;
+//         }
+//         cout << "----------------------------------------------" << endl
+//              << endl;
+//     }
+// };
+//  public:
+//     void InterestRate()
+//     {
+        
+//         double rate;
+//         cout << "----------------Saving Account----------------" << endl;
+//         cout << "| Enter the InterestRate : ";
+//         cin >> rate;
+//         double withd = withd * (rate / 100);
+//         cout << "| InterestRate (%): " << withd << endl;
+//         cout << "----------------------------------------------" << endl
+//              << endl;
+//     }
+
+

@@ -38,7 +38,7 @@ int main()
     {
         rowsum += box[row][i];
     }
-    cout << "Sum of " << row + 1 << " : " << rowsum << endl;
+    cout << "Sum of " << row + 0 << " : " << rowsum << endl;
 
     cout << "----------------------------------" << endl;
     int col, colsum = 0;
@@ -49,6 +49,6 @@ int main()
     {
         colsum += box[i][col];
     }
-    cout << "Sum of " << col + 1 << " : " << colsum << endl;
+    cout << "Sum of " << col + 0 << " : " << colsum << endl;
         cout << "----------------------------------" << endl;
 }

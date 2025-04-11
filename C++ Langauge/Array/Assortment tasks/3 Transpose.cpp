@@ -3,17 +3,15 @@ using namespace std;
 
 int main()
 {
-    int rowsize , colsize ;
-    cout << "Enter the size of rowsize Array : " ;
-    cin >> rowsize;
-    cout << "Enter the size of colsize Array : " ;
-    cin >> colsize;
+    int size ;
+    cout << "Enter the Rowsize & Colsize Array : " ;
+    cin >> size;
     cout << "----------------------------------" << endl;
-    int box[rowsize][colsize] ;
+    int box[size][size] ;
     
-    for (int i = 0; i < rowsize; i++)
+    for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < colsize; j++)
+        for (int j = 0; j < size; j++)
         {
             cout << "box [" << i << "][" << j << "] = " ;
             cin >> box[i][j];
@@ -21,9 +19,9 @@ int main()
     }
     
     cout << "----------------------------------" << endl;
-    for (int i = 0; i < rowsize; i++)
+    for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < colsize; j++)
+        for (int j = 0; j < size; j++)
         {
             cout << box[i][j] << " " ;
         }
@@ -32,9 +30,9 @@ int main()
     
      cout << "----------------------------------" << endl;
      cout << "Transpose value : " << endl;
-        for (int i = 0; i < rowsize; i++)
+        for (int i = 0; i < size; i++)
         {
-     for (int j = 0; j < colsize; j++)
+     for (int j = 0; j < size; j++)
     {
             cout << box[j][i] << " ";
         }

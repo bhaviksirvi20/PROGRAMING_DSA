@@ -8,37 +8,61 @@ void Enqueue(int queue[], int &size, int &rear, int user, int usersize) {
     rear++;
     for (int i = size; i <= rear; i++) {
         queue[rear] = user;
-        cout << queue[i] << " " << endl;
+        cout << queue[i] << " " ;
     }
+    cout << endl;
 }
 
-
-void Dequeue(int queue[], int &size, int &rear, int user) {
-    size++;
-    for (int i = size; i <= rear; i++) {
-        cout << queue[i] << " " << endl;
+void Dequeue(int queue[], int &size, int &rear) {
+    if (size == -1 || size > rear) {
+        cout << "Queue is Empty! Cannot dequeue." << endl;
+        return;
     }
+
+    for (int i = size + 1; i <= rear; i++) {
+        queue[i - 1] = queue[i];
+        cout << queue[i] << " ";
+    }
+
+    rear--;  
+    cout << endl;
+    if (rear < size) {
+        size = -1;
+        rear = -1;
+    }
+
+    cout << "Element dequeued successfully." << endl;
 }
 
-void front(int queue[], int &size) {
+void front(int queue[], int &size , int &rear) {
+    if (size == -1)
+    {
+       cout << "Please Enter First Value...!!" << endl;
+    }
+    else{
     cout << "Front value : " << queue[size] << endl;
+    }
 }
 
 void Rear(int queue[], int &rear) {
-    cout << "Last value : " << queue[rear] << endl;
-}
-
-void isEmpty(int &size, int &rear) {
-    if (size > rear) {
-        cout << "Queue is Empty ( blank )" << endl;
-    } else {
-        cout << "Queue is Not Empty ( Not blank )" << endl;
+    if (rear == -1)
+    {
+       cout << "Please Enter Any Value...!!" << endl;
+    }
+    else{
+        cout << "Last value : " << queue[rear] << endl;
     }
 }
 
-
+void isEmpty(int &size, int &rear) {
+    if (size == -1 || size > rear) {
+        cout << "Queue is Empty " << endl;
+    } else {
+        cout << "Queue is Not Empty" << endl;
+    }
+}
 void isFull(int rear, int usersize) {
-    if (rear == usersize - 1) {
+    if (rear >= usersize - 1) {
         cout << "Queue is Full" << endl;
     } else {
         cout << "Queue is Not Full" << endl;
@@ -82,11 +106,11 @@ int main() {
                 break;
 
             case 2:
-                Dequeue(queue, size, rear, user);
+                Dequeue(queue, size, rear);
                 break;
 
             case 3:
-                front(queue, size);
+                front(queue, size , rear);
                 break;
 
             case 4:

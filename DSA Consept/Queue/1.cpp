@@ -8,6 +8,7 @@ void Enqueue(int queue[], int &size, int &rear, int user, int usersize) {
     rear++;
     for (int i = size; i <= rear; i++) {
         queue[rear] = user;
+<<<<<<< HEAD
         cout << queue[i] << " " ;
     }
     cout << endl;
@@ -63,6 +64,39 @@ void isEmpty(int &size, int &rear) {
 }
 void isFull(int rear, int usersize) {
     if (rear >= usersize - 1) {
+=======
+        cout << queue[i] << " " << endl;
+    }
+}
+
+
+void Dequeue(int queue[], int &size, int &rear, int user) {
+    size++;
+    for (int i = size; i <= rear; i++) {
+        cout << queue[i] << " " << endl;
+    }
+}
+
+void front(int queue[], int &size) {
+    cout << "Front value : " << queue[size] << endl;
+}
+
+void Rear(int queue[], int &rear) {
+    cout << "Last value : " << queue[rear] << endl;
+}
+
+void isEmpty(int &size, int &rear) {
+    if (size > rear) {
+        cout << "Queue is Empty ( blank )" << endl;
+    } else {
+        cout << "Queue is Not Empty ( Not blank )" << endl;
+    }
+}
+
+
+void isFull(int rear, int usersize) {
+    if (rear == usersize - 1) {
+>>>>>>> e76ff49 (Your commit message)
         cout << "Queue is Full" << endl;
     } else {
         cout << "Queue is Not Full" << endl;
@@ -106,11 +140,19 @@ int main() {
                 break;
 
             case 2:
+<<<<<<< HEAD
                 Dequeue(queue, size, rear);
                 break;
 
             case 3:
                 front(queue, size , rear);
+=======
+                Dequeue(queue, size, rear, user);
+                break;
+
+            case 3:
+                front(queue, size);
+>>>>>>> e76ff49 (Your commit message)
                 break;
 
             case 4:
@@ -139,4 +181,8 @@ int main() {
         }
         cout << "--------------------------------------" << endl;
     } while (choice != 8);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e76ff49 (Your commit message)

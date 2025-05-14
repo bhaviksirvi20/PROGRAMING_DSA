@@ -21,20 +21,16 @@ int main(){
         cout << array[i] << " ";
     }
     cout << endl << "-----------------------------" << endl;
-    
-    for(int i = 0 ; i < size ; i++){
-        for(int j = i ; j < size ; j++){
+    int i;
+    for(i = 0 ; i < size ; i++){
             if(array[i] == key){
-                cout << "-----------------------------" << endl;
                 cout << "| Successfuly..." << endl;
-                cout << "| key index no. is : " << j << endl;
+                cout << "| key index no. is : " << i << endl;
                 break;
             }
-            else{
-                cout << "Invalid key !" << endl;
-                break;
-            }
-        }
+    }
+    if(i == size){
+        cout << "Invalid ! " << endl;
     }
     cout << "-----------------------------" << endl;
 }

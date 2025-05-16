@@ -1,94 +1,209 @@
 #include <iostream>
 using namespace std;
 
-struct Node{
-    public:
+struct node
+{
+public:
     int data;
-    Node *next;
+    node *next;
 
-    Node(int val){
-        data = val;
+    node(int valu)
+    {
+        data = valu;
         next = NULL;
     }
 };
-void start(int arr){
-    Node *n1; 
-    
-    for(int i = 0 ; i < arr ; i++){
-    if(n1 == NULL){
-        n1 = new Node(arr);
-        cout << "Enter the Element : " ;
-        cin >> arr;
+void start(int val, node *&head)
+{
+
+    if (head == NULL)
+    {
+        head = new node(val);
+        cout << "Node Created" << endl;
     }
-    else{
-        Node *temp;
-        temp = new Node(arr);
-        temp->next = n1;
-        n1 = temp;
-    }
+    else
+    {
+        node *temp = new node(val);
+        temp->next = head;
+        head = temp;
+        cout << "Node Created" << endl;
     }
 }
-void Read(int *temp){
-     Node *temp;
-    while(temp != NULL){
-        cout << temp->next->data << " " << endl;
+
+void anypos(node *&head, int matchval)
+{
+    int val;
+    node *temp = head;
+    while (temp != NULL)
+    {
+        if (temp->data == matchval)
+        {
+            cout << "Enter the value : ";
+            cin >> val;
+            node *newnode = new node(val);
+            newnode->next = temp->next;
+            temp->next = newnode;
+            cout << "Node Created" << endl;
+        }
         temp = temp->next;
-    };
+    }
+}
+void end(node *&head, int val)
+{
+    if (head == NULL)
+    {
+        head = new node(val);
+        cout << "Node Created" << endl;
+    }
+    else
+    {
+        node *temp = head;
+        while (temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+        temp->next = new node(val);
+    }
+}
+
+void read(node *head)
+{
+    node *temp = head;
+    cout << "Node value = ";
+    while (temp != NULL)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << endl;
+    cout << "----------------------------------" << endl;
+}
+
+void update(node *&head, int matchval, int val)
+{
+    node *temp = head;
+    while (temp != NULL)
+    {
+        if (temp->data == matchval)
+        {
+            temp->data = val;
+            cout << "Value is Updated.." << endl;
+        }
+        temp = temp->next;
+    }
+}
+void remove(node *&head)
+{
+    if (head == NULL)
+    {
+        cout << "List is empty. Nothing to delete." << endl;
+        return;
+    }
+
+    int delVal;
+    cout << "Enter the value to delete: ";
+    cin >> delVal;
+
+
+    if (head->data == delVal)
+    {
+        node *toDelete = head;
+        head = head->next;
+        delete toDelete;
+        cout << "Node deleted." << endl;
+        return;
+    }
+    node *temp = head;
+    while (temp->next != NULL && temp->next->data != delVal)
+    {
+        temp = temp->next;
+    }
+
+    if (temp->next == NULL)
+    {
+        cout << "Value not found." << endl;
+    }
+    else
+    {
+        node *toDelete = temp->next;
+        temp->next = temp->next->next;
+        delete toDelete;
+        cout << "Node deleted." << endl;
+    }
 }
 int main()
 {
-    int user , add , arr;
-    Node *n1; 
-    Node *temp;
-    
-        cout << "======= Curd Operation ======= " << endl;
-    do{
-        cout << "1. Insert" << endl;
-        cout << "2. Read" << endl;
-        cout << "3. Update" << endl;
-        cout << "4. Delete" << endl;
-        cout << "0. Exit..." << endl;
-        cout << "==============================" << endl;
-        cout << "Enter your choise : " ;
+    int user, userval, match;
+    node *head = NULL;
+    do
+    {
+        cout << "----------------------------------" << endl;
+        cout << "Press 1 for Insert." << endl;
+        cout << "Press 2 for Read." << endl;
+        cout << "Press 3 for Update." << endl;
+        cout << "Press 4 for Delete." << endl;
+        cout << "Press 0 for Exit.." << endl;
+        cout << "----------------------------------" << endl;
+        cout << "Enter your Choice = ";
         cin >> user;
-        switch(user) {
+        cout << "----------------------------------" << endl;
+        switch (user)
+        {
+        case 1:
+            int intval;
+
+            cout << "1. Insert value at Start : " << endl;
+            cout << "2. Insert value at Any Position : " << endl;
+            cout << "3. Insert value at End : " << endl;
+            cout << "----------------------------------" << endl;
+            cout << "Enter the insert value : ";
+            cin >> intval;
+            cout << "----------------------------------" << endl;
+            switch (intval)
+            {
             case 1:
-                cout  << "1. Start" << endl;
-                cout  << "2. At Any Position" << endl;
-                cout  << "3. Last" << endl;
-                cout << "==============================" << endl;
-                cout << "Enter the Insert Value : " ;
-                cin >> add ;
-                cout << "==============================" << endl;
-                switch(user){
-                    case 1:
-                        
-                    
-                     start(arr);
-                    break;
-                    case 2:
-                    
-                    break;
-                    case 3:
-                    
-                    break;
-                    
-                    default:
-                    break;
-                }
-            break;
+                cout << "Enter the value : ";
+                cin >> userval;
+
+                start(userval, head);
+                break;
             case 2:
-                Read(*temp);
-            break;
+
+                cout << "Enter value that insert after that value = ";
+                cin >> match;
+
+                anypos(head, match);
+                break;
             case 3:
-            
+                cout << "Enter the value : ";
+                cin >> userval;
+                end(head, userval);
+                break;
+
+            default:
+                break;
+            }
+
             break;
-            case 4:
-            
+        case 2:
+            read(head);
             break;
-            case 0:
-                
+        case 3:
+            cout << "Enter the value that Update = ";
+            cin >> match;
+            cout << "Enter the value that Update = ";
+            cin >> userval;
+            update(head, match, userval);
+            break;
+        case 4:
+           remove(head);
+            break;
+        case 0:
+
+            break;
+
+        default:
             break;
         }
-    }while(user != 0);
+    } while (user != 0);
 }

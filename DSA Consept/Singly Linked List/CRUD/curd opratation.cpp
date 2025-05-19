@@ -181,6 +181,7 @@ int main()
                 break;
 
             default:
+            cout << "Invalide your option ples enter the no. (1 to 3) " << endl;
                 break;
             }
 
@@ -199,10 +200,11 @@ int main()
            remove(head);
             break;
         case 0:
-
+                cout << "Exit..." << endl;
             break;
 
         default:
+        cout << "Invalide your option ples enter the no. (1 to 4) " << endl;
             break;
         }
     } while (user != 0);

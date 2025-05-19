@@ -1,3 +1,7 @@
+/*
+Do matrices ka input lo, dono print karo, fir unka sum matrix calculate karke print karo.
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -51,6 +55,7 @@ int main()
     }
     cout << endl;
     cout << "==================================" << endl;
+
     int box3[rowsize][colsize];
 
     for (int i = 0; i < rowsize; i++)

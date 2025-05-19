@@ -1,3 +1,5 @@
+// Yeh program ek 1D array ke elements ka sum nikalta hai aur unka average calculate karta hai.
+
 #include <iostream>
 using namespace std;
 
@@ -22,4 +24,3 @@ int main()
     cout << "Average of an Array: " << average << endl;
     cout << "=================================" << endl;
 }
-

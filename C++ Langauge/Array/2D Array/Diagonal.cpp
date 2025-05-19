@@ -1,3 +1,7 @@
+/*
+Matrix input lo, matrix print karo, aur uske diagonal elements print karo.
+*/
+
 #include <iostream>
 using namespace std;
 

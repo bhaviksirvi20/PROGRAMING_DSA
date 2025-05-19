@@ -1,3 +1,12 @@
+/*
+Code ka purpose:
+- User se rows aur columns ki size input lo.
+- 2D array (matrix) ke elements input karo.
+- Pure matrix ko print karo.
+- Matrix ke anti-diagonal elements print karo (jaha row + column ka sum rowsize-1 ke barabar ho).
+- Note: Anti-diagonal tabhi meaningful hai jab matrix square ho (rowsize == colsize).
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -31,7 +40,7 @@ int main()
         cout << endl;
     }
     cout << "-------------------------------------" << endl;
-    
+
     cout << "Anti Diagonal : " << endl;
     for (int row = 0; row < rowsize; row++)
     {

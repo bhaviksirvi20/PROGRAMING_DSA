@@ -1,3 +1,12 @@
+/*
+    Program: Input and Transpose of a 2D Array
+    Description:
+        - Takes the size of rows and columns from the user.
+        - Accepts input values into a 2D array.
+        - Displays the original 2D array.
+        - Prints the transpose of the 2D array.
+*/
+
 #include<iostream>
 using namespace std;
 
@@ -27,19 +36,18 @@ int main()
         {
             cout << box[i][j] << " " ;
         }
-    cout << endl ;
+        cout << endl ;
     }
     
-     cout << "----------------------------------" << endl;
-     cout << "Transpose value : " << endl;
-        for (int i = 0; i < rowsize; i++)
-        {
-     for (int j = 0; j < colsize; j++)
+    cout << "----------------------------------" << endl;
+    cout << "Transpose value : " << endl;
+    for (int i = 0; i < colsize; i++)  
     {
+        for (int j = 0; j < rowsize; j++)
+        {
             cout << box[j][i] << " ";
         }
         cout << endl;
     }
-      cout << "==================================" << endl;
-    
-}   
+    cout << "==================================" << endl;
+}

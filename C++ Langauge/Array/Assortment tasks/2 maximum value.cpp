@@ -1,3 +1,12 @@
+/*
+    Program: Find Maximum Value in a 2D Array
+    Description:
+        - Takes row size and column size from the user.
+        - Accepts elements for a 2D array.
+        - Displays the original 2D array.
+        - Finds and prints the maximum value present in the entire 2D array.
+*/
+
 #include <iostream>
 using namespace std;
 

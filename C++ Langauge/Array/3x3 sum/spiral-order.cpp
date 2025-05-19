@@ -1,3 +1,8 @@
+// Yeh program 4x4 matrix input leta hai user se,
+// Fir matrix print karta hai formatted form me,
+// Aur finally matrix ke outer border elements ko
+// clockwise order me print karta hai.
+
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,12 @@
+/*
+    Program: Sort an array and remove duplicate elements
+    Description:
+        - Takes input of an array from the user.
+        - Sorts the array in ascending order using Bubble Sort.
+        - Displays the sorted array.
+        - Then removes and displays duplicate-free elements.
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -8,7 +17,9 @@ int main()
     cout << "Enter Array Size: ";
     cin >> size;
     cout << "---------------------------------" << endl;
+
     int box[size];
+
     for (int i = 0; i < size; i++)
     {
         cout << "box[" << i << "] = ";
@@ -17,7 +28,7 @@ int main()
 
     for (int i = 0; i < size - 1; i++)
     {
-        for (int j = 0; j < size; j++)
+        for (int j = 0; j < size - i - 1; j++)
         {
             if (box[j] > box[j + 1])
             {
@@ -27,6 +38,7 @@ int main()
             }
         }
     }
+
     cout << "---------------------------------" << endl;
 
     for (int i = 0; i < size; i++)
@@ -34,6 +46,7 @@ int main()
         cout << box[i] << " ";
     }
     cout << endl;
+
     cout << "========================" << endl;
 
     cout << "Same Value Remove: " << endl;
@@ -45,7 +58,8 @@ int main()
             cout << box[i] << " ";
         }
     }
-    size--;
+
     cout << endl;
     cout << "---------------------------------" << endl;
+
 }

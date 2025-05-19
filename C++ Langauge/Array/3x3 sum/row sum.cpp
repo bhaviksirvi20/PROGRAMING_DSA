@@ -1,3 +1,8 @@
+/*
+Matrix input karo, print karo,
+phir har row ka sum calculate karke print karo.
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -9,6 +14,7 @@ int main()
     cout << "Enter the size of colsize Array : ";
     cin >> colsize;
     cout << "----------------------------------" << endl;
+
     int box[rowsize][colsize];
 
     for (int i = 0; i < rowsize; i++)
@@ -21,6 +27,7 @@ int main()
     }
 
     cout << "----------------------------------" << endl;
+
     for (int i = 0; i < rowsize; i++)
     {
         for (int j = 0; j < colsize; j++)
@@ -31,13 +38,16 @@ int main()
     }
 
     cout << "----------------------------------" << endl;
+
     for (int i = 0; i < rowsize; i++)
     {
+        sum = 0;
         for (int j = 0; j < colsize; j++)
         {
-            sum = sum + box[i][j];
+            sum += box[i][j];
         }
-        cout << "Box [" << i << "] = " << sum << endl;
+        cout << "Sum of Row [" << i << "] = " << sum << endl;
     }
+
     cout << "==================================" << endl;
 }

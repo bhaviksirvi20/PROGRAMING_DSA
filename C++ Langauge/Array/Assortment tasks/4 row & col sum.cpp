@@ -1,3 +1,13 @@
+/*
+    Program: Sum of a Specific Row and Column in a Square Matrix
+    Description:
+        - Takes the size of a square matrix from the user.
+        - Accepts elements of the matrix from the user.
+        - Displays the matrix.
+        - Asks for a row number and calculates the sum of that row.
+        - Asks for a column number and calculates the sum of that column.
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -38,7 +48,7 @@ int main()
     {
         rowsum += box[row][i];
     }
-    cout << "Sum of " << row + 1 << " : " << rowsum << endl;
+    cout << "Sum of row " << row << " : " << rowsum << endl;
 
     cout << "----------------------------------" << endl;
     int col, colsum = 0;
@@ -49,6 +59,6 @@ int main()
     {
         colsum += box[i][col];
     }
-    cout << "Sum of " << col + 1 << " : " << colsum << endl;
-        cout << "----------------------------------" << endl;
+    cout << "Sum of column " << col << " : " << colsum << endl;
+    cout << "----------------------------------" << endl;
 }

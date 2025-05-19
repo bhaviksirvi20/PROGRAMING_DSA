@@ -1,3 +1,5 @@
+// Yeh program do 1D arrays ke elements ka sum nikalta hai aur third array me store karke output karta hai.
+
 #include <iostream>
 using namespace std;
 
@@ -39,5 +41,3 @@ int main()
     }
     cout << "---------------------------------" << endl;
 }
-  
- 

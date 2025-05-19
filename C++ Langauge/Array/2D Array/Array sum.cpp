@@ -1,3 +1,7 @@
+/*
+Matrix ke elements input lo, print karo, aur unka total sum nikal kar display karo.
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -28,5 +32,5 @@ int main()
         }
         cout << endl ;
     }
-        cout << "sum : " << sum;
+    cout << "sum : " << sum;
 }

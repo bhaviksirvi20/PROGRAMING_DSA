@@ -1,5 +1,16 @@
-#include <iostream>
+/*
+    Program: Simple CRUD Operations on an Integer Array
+    Description:
+        - Provides a menu-driven interface to perform CRUD operations on an array.
+        - Create: Add a new integer value to the array (up to 1000 elements).
+        - Read: Display all current values in the array.
+        - Update: Modify a value at a specific index.
+        - Delete: Remove a value at a specific index and shift elements.
+        - Exit: Terminate the program.
+        - Validates inputs and handles edge cases like empty array and invalid indices.
+*/
 
+#include <iostream>
 using namespace std;
 
 int main() {

@@ -1,3 +1,14 @@
+/*
+Simple Bank Management System with Classes and Inheritance.
+
+- Bank: Account info, deposit, withdraw, balance check.
+- Savings: Interest calculation on savings balance.
+- Current: Overdraft facility with limit.
+- FixedDeposit: Calculates FD interest and maturity value.
+
+Main: Menu driven program for user to perform banking operations.
+*/
+
 #include <iostream>
 #include <cmath>
 

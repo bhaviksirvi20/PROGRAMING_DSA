@@ -1,3 +1,12 @@
+/*
+    Program: Find the Second Largest Value in an Array
+    Description:
+        - Takes the size of an array from the user.
+        - Accepts integer values into the array.
+        - Sorts the array in ascending order using bubble sort.
+        - Displays the second largest value in the array.
+*/
+
 #include <iostream>
 using namespace std;
 

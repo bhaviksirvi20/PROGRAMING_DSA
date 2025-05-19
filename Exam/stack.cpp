@@ -1,5 +1,3 @@
-// posh pop pick isempty isfull size exit
-
 #include<iostream>
 using namespace std;
 
